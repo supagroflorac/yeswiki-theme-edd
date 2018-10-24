@@ -1,0 +1,54 @@
+<!DOCTYPE html><head>
+  <meta charset="{{configuration param="charset"}}">
+  {{metarobots}}
+  
+
+<meta name="keywords" content="{{configuration param="meta_keywords"}}" />
+  <meta name="description" content="{{configuration param="meta_description"}}" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>{{configuration param="wakka_name"}} : {{currentpage}}</title>
+	{{linkstyle}}
+	{{linkrss}}
+</head>
+<body class="pageprincipale contenu" {{parambody}}>
+	<header id="header">
+		<div class="bandeau">
+			{{include page="PageHeader" doubleclic="1" actif="1"}}
+		</div>
+        <nav class="navig">
+            <div class="menu_haut menu_ferme">
+                {{include page="PageMenuHaut" doubleclic="1" actif="1"}}
+            </div>
+        </nav>
+	</header>
+	<section>
+		<article id="main" class="double" role="main" {{doubleclic}}>
+			{WIKINI_PAGE}
+
+		</article>
+		<aside id="main" class="double" role="main">
+			{{include page="pageMenu" doubleclic="1" actif="1"}}	
+		</aside>
+
+	</section>
+	<footer>
+		<div id="adresse">
+		{{include page="PageFooter" doubleclic="1" actif="1"}}
+		{{barreredaction class="form-actions"}}
+		</div>
+	</footer>
+	{{linkjavascript}}
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-61994216-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
+</div>
+</body>
+
+

@@ -1,0 +1,12 @@
+.nuage {
+  display:flex;
+  max-width:100%;
+  flex-wrap: wrap;
+}
+.tag-list {
+display:inline-block;
+float:none;
+transform : rotate(-2deg);
+flex:1 1 33%;
+  
+}
