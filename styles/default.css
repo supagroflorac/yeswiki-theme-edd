@@ -32,7 +32,7 @@ body {
   hyphens: auto;
   font-kerning: normal;
   font-feature-settings: "kern";
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", 
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans",
   "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   background-color: #92C362;
   background-position: center 0 !important;
@@ -82,6 +82,8 @@ a {
   text-decoration: none;
   transition: all 0.15s ease-out 0s;
 }
+
+
 
 /***** couleurs ****/
 
@@ -962,8 +964,8 @@ nav, footer {
 }
 
 .navbar-nav li ul li a {
-  margin-left: -15px;
-  padding: 1px 20px 1px 15px;
+
+/*  padding: 1px 20px 1px 15px;*/
 }
 
 .navbar-nav li ul li ul {
@@ -1125,7 +1127,6 @@ footer #logos_bas {
 
 /***************** menu haut ******/
 .dropdown-menu > li.active.active-list {
-  margin: 0;
   width: 100%;
 }
 
@@ -1134,6 +1135,14 @@ footer #logos_bas {
   color: #707070;
   display: block;
   padding-left: 10px;
+  font-weight: bold;
+}
+
+.dropdown-menu > .active > a:hover {
+  background: transparent;
+  color: #707070;
+  background-color: rgba(255,255,255,.7);
+  color: #00DCA6;
 }
 
 
