@@ -960,12 +960,6 @@ nav, footer {
 
 .navbar-nav li ul li {
   padding: 2px 4px;
-  margin: 0 0 0 20px;
-}
-
-.navbar-nav li ul li a {
-
-/*  padding: 1px 20px 1px 15px;*/
 }
 
 .navbar-nav li ul li ul {
@@ -1126,6 +1120,10 @@ footer #logos_bas {
 
 
 /***************** menu haut ******/
+.dropdown-menu {
+  overflow: hidden;
+}
+
 .dropdown-menu > li.active.active-list {
   width: 100%;
 }
