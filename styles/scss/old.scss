@@ -139,22 +139,18 @@ a {
 
 .btn-primary {
   background-color: #297fff;
-  border-color:;
 }
 
 .btn-danger {
   background-color: #ff36bf;
-  border-color:;
 }
 
 .btn-success {
   background-color: #00DCA6;
-  border-color:;
 }
 
 .btn-success:hover {
   background-color: #28C100;
-  border-color:;
 }
 
 /****** bouton ******/
@@ -211,9 +207,6 @@ a {
 
   .bandeau .logo {
     height: 60px;
-  }
-
-  .bandeau. nom_site {
   }
 }
 
@@ -540,7 +533,6 @@ footer a:hover {
 .navbar-nav li:hover ul {
   display: inline-flex;
   flex-direction: column;
-  align-items: ;
 }
 
 .navbar-nav li .dropdown-menu li {
@@ -624,7 +616,6 @@ aside {
   section {
     flex-direction: column;
     align-items: stretch;
-    justify-content:;
   }
 
   aside {
@@ -1265,8 +1256,6 @@ body {
 }
 
 /******** hack roue crantée **/
-}
-
 .btn-group .dropdown-menu {
   z-index: 2000 !important;
 }
@@ -1340,7 +1329,6 @@ a.size5:hover,a.size6:hover {
 
 a.size1:hover,a.size2:hover,a.size3:hover,a.size4:hover {
   color: #1559b5;
-  !important;
 }
 
 @media screen and (max-width:767px) {
