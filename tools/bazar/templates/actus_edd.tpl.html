@@ -37,10 +37,16 @@ foreach($fiches as $fiche) {
       $button = "<span class='actuEAButton'>$file $link</span>\n";
     }
 
+    $date = 'Créé le ' . $fiche['date_creation_fiche'];
+    if ($fiche['date_creation_fiche'] !== $fiche['date_maj_fiche']) {
+      $date = 'Mis à jour le ' . $fiche['date_maj_fiche'];
+    }
+
     $html = "<div class='actuEA'>\n
       <a class='imageActuEA' href='$page'>$image</a>\n
       <div class='textActuEA'>
         <h1><a href='$page'>$title</a></h1>\n
+        <p class='dateActuEA'>$date</p>\n
         <p>$content</p>\n
         $button
       </div>
