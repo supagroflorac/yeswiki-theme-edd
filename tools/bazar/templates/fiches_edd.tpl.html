@@ -1,0 +1,54 @@
+<?php
+
+if (count($fiches) > 0) {
+  print("<div class=\"actusEA\">\n");
+}
+
+foreach($fiches as $fiche) {
+    $image = "<img src='files/backgrounds/defautedd.jpg' />\n";
+    if (isset($fiche['imagebf_image']) and !empty($fiche['imagebf_image'])) {
+         $image = "<img src='"
+            . redimensionner_image(
+              'files/' . $fiche['imagebf_image'],
+              'cache/image_240_240_' . $fiche['imagebf_image'],
+              240, 240, 'crop'
+            )
+            . "' />\n";
+    }
+    $page = '?' . $fiche['id_fiche'];
+    $title = $fiche['bf_titre'];
+    $content = substr($fiche['bf_resume'], 0, 200);
+    if (strlen(utf8_decode($fiche['bf_resume'])) > 200) {
+      $content .= "… <a href='$page'>lire la suite</a>";
+    }
+
+    $link = "";
+    if (isset($fiche['bf_site_internet']) and !empty($fiche['bf_site_internet'])) {
+      $link = "<a href='" . $fiche['bf_site_internet'] . "'><i class='glyphicon glyphicon-link'></i> Lien </a>";
+    }
+
+    $file = "";
+    if (isset($fiche['fichierfichier1']) and !empty($fiche['fichierfichier1'])) {
+        $file = "<a href='files/" . $fiche['fichierfichier1'] . "'><i class='glyphicon glyphicon-file'></i> Fichier</a>";
+    }
+
+    $button = "";
+    if (!empty($file) or !empty($link)) {
+      $button = "<span class='actuEAButton'>$file $link</span>\n";
+    }
+
+    $html = "<div class='ficheEA'>\n
+      $image
+      <h1>$title</h1>\n
+      <p>$content</p>\n
+      $button
+    </div>\n
+    ";
+
+    print($html);
+}
+
+
+if (count($fiches) > 0) {
+  print("</div>\n");
+}

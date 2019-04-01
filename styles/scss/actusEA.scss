@@ -19,7 +19,6 @@ div.actusEA {
     margin: .5em;
     text-align: left;
     width: 100%;
-    max-width: 55em;
 
     a.imageActuEA {
       flex-shrink: 0;
@@ -41,7 +40,7 @@ div.actusEA {
 
     .dateActuEA {
       font-size: 0.6em;
-      align-self: flex-end;
+      align-self: flex-start;
     }
 
     h1 {
