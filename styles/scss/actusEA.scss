@@ -1,33 +1,48 @@
 div.actusEA {
   display: flex;
   flex: 0 0 auto;
-  flex-flow: row;
-  flex-wrap: wrap;
+  flex-flow: column;
   width: 100%;
   box-sizing: border-box;
+  align-items: center;
 
   .actuEA {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
-    align-items: stretch;
+    align-items: flex-start;
 
     border: 1em white solid;
     overflow: hidden;
     transition: transform 0.5s ease;
-    padding: 1em;
+    padding: .5em;
+    margin: .5em;
     text-align: left;
-    width: 25%;
+    width: 100%;
+    max-width: 55em;
+
+    a.imageActuEA {
+      flex-shrink: 0;
+      max-width: 20%;
+    }
 
     img {
-      width: 100%;
+      width: 7em;
       height: auto;
+    }
+
+    .textActuEA {
+      padding: 0 1em;
+      display: flex;
+      flex-flow: column;
+      flex-grow: 2;
     }
 
     h1 {
       color: #333;
-      font-size: 1.2em;
+      font-size: 1.8em;
       font-weight: bold;
+      margin-top: 0;
     }
 
     p {
@@ -40,44 +55,6 @@ div.actusEA {
     .actuEAButton {
       text-align: right;
       justify-self: end;
-
-      a {
-
-      }
     }
-  }
-
-  .actuEA:hover {
-    text-decoration: none;
-    transform: scale(1.05);
-  }
-
-  .actuEA:hover:before {
-    content: " ";
-    position: absolute;
-    z-index: -1;
-    top: 3px;
-    left: 3px;
-    right: 3px;
-    bottom: 3px;
-    border: 3px solid #ff3da6;
-  }
-}
-
-@media (max-width: 1100px) {
-  div.actusEA div.actuEA {
-    width: 33%;
-  }
-}
-
-@media (max-width: 860px) {
-  div.actusEA div.actuEA {
-    width: 50%;
-  }
-}
-
-@media (max-width: 640px) {
-  div.actusEA div.actuEA {
-    width: 100%;
   }
 }
