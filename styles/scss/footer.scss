@@ -1,0 +1,27 @@
+footer {
+  display: flex;
+  div.include {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+
+    a {
+      text-decoration: underline;
+    }
+
+    img {
+      max-width: 14em;
+      max-height: 8em;
+      width: auto;
+      height: auto;
+      margin: 1em;
+    }
+
+    .row {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
