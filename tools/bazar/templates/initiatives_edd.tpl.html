@@ -1,0 +1,30 @@
+<?php
+
+if (count($fiches) > 0) {
+  print("<div class=\"initiativesEA\">\n");
+}
+
+foreach($fiches as $fiche) {
+    $pageLink = '?' . $fiche['id_fiche'];
+
+    $title = $fiche['bf_titre'];
+
+    $content = substr($fiche['bf_presentation'], 0, 200);
+    if (strlen(utf8_decode($fiche['bf_presentation'])) > 200) {
+      $content .= "[…]";
+    }
+
+
+    $html = "<a href='$pageLink' class='initiative'>\n
+      <h1>$title</h1>\n
+      <p>$content</p>\n
+    </a>\n
+    ";
+
+    print($html);
+}
+
+
+if (count($fiches) > 0) {
+  print("</div>\n");
+}
