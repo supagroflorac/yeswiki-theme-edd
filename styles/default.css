@@ -520,7 +520,7 @@ div.actusEA .actuEA .actuEAButton { text-align: right; justify-self: end; }
 
 div.agendaEEDD { display: flex; flex: 0 0 auto; flex-flow: column; width: 100%; box-sizing: border-box; align-items: center; }
 div.agendaEEDD .eventEEDD { display: flex; flex-direction: row; justify-content: flex-start; align-items: flex-start; border: 1em white solid; overflow: hidden; transition: transform 0.5s ease; padding: .5em; margin: .5em; text-align: left; width: 100%; }
-div.agendaEEDD .eventEEDD a.imageEventEEDD { flex-shrink: 0; max-width: 20%; }
+div.agendaEEDD .eventEEDD div.imageEventEEDD { flex-shrink: 0; max-width: 20%; }
 div.agendaEEDD .eventEEDD img { width: 7em; height: auto; }
 div.agendaEEDD .eventEEDD .textEventEEDD { padding: 0 1em; display: flex; flex-flow: column; flex-grow: 2; justify-content: flex-start; }
 div.agendaEEDD .eventEEDD .dateEventEEDD { font-size: 0.6em; align-self: flex-start; }
