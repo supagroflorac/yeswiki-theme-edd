@@ -1,0 +1,67 @@
+<?php
+
+if (count($fiches) > 0) {
+  print("<div class=\"agendaEEDD\">\n");
+}
+
+// Tris par date de début et ne conserve que les évènements encore en cours.
+
+$record_array = array();
+foreach ($fiches as $fiche) {
+
+    // Ne prend que les évènements dont la date de fin n'est pas encore passé.
+    if (strtotime($fiche['bf_date_debut_evenement']) > time()) {
+        $record_array[strtotime($fiche['bf_date_debut_evenement'])] = $fiche;
+    }
+}
+krsort($record_array, SORT_REGULAR);
+
+foreach($record_array as $record) {
+    $image = "<img src='files/backgrounds/defautedd.jpg' />\n";
+    if (isset($record['imagebf_image']) and !empty($record['imagebf_image'])) {
+         $image = "<img src='"
+            . redimensionner_image(
+              'files/' . $record['imagebf_image'],
+              'cache/image_240_240_' . $record['imagebf_image'],
+              240, 240, 'crop'
+            )
+            . "' />\n";
+    }
+    $page = '?' . $record['id_fiche'];
+    $title = $record['bf_titre'];
+    $content = $record['bf_description'];
+
+    $link = "";
+    if (isset($record['bf_site_internet'])
+        and !empty($record['bf_site_internet'])
+    ) {
+      $link = "<a href='" . $record['bf_site_internet']
+        . "'><i class='glyphicon glyphicon-link'></i> Lien </a>";
+    }
+
+    $button = "";
+    if (!empty($link)) {
+      $button = "<span class='eventEEDDButton'>$link</span>\n";
+    }
+
+    $date = 'Du ' . $record['bf_date_debut_evenement']
+        .' au ' . $record['bf_date_fin_evenement'];
+
+    $html = "<div class='eventEEDD'>\n
+      <div class='imageEventEEDD'>$image</div>\n
+      <div class='textEventEEDD'>
+        <h1>$title</h1>\n
+        <p class='dateEventEEDD'>$date</p>\n
+        <p>$content</p>\n
+        $button
+      </div>
+    </div>\n
+    ";
+
+    print($html);
+}
+
+
+if (count($fiches) > 0) {
+  print("</div>\n");
+}
