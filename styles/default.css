@@ -545,4 +545,6 @@ footer div.include a { text-decoration: underline; color: white; }
 footer div.include img { max-width: 14em; max-height: 8em; width: auto; height: auto; margin: 1em; }
 footer div.include .row { display: flex; flex-flow: row wrap; align-items: center; justify-content: center; }
 
+#main { max-width: 65em; }
+
 /*# sourceMappingURL=default.css.map */
