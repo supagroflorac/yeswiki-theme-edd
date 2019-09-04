@@ -44,6 +44,7 @@ foreach($record_array as $record) {
       $button = "<span class='eventEEDDButton'>$link</span>\n";
     }
 
+    setlocale(LC_TIME, 'fr_FR');
     $dateFormat = "%e %B %G";
     $startDate = strftime($dateFormat, strtotime($record['bf_date_debut_evenement']));
     $endDate = strftime($dateFormat, strtotime($record['bf_date_fin_evenement']));
