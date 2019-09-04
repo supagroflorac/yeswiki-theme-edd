@@ -37,9 +37,11 @@ foreach($fiches as $fiche) {
       $button = "<span class='actuEAButton'>$file $link</span>\n";
     }
 
-    $date = 'Créé le ' . $fiche['date_creation_fiche'];
+    setlocale(LC_TIME, 'fr_FR');
+    $dateFormat = "%e %B %G";
+    $date = 'Créé le ' . strftime($dateFormat, strtotime($fiche['date_creation_fiche']));
     if ($fiche['date_creation_fiche'] !== $fiche['date_maj_fiche']) {
-      $date = 'Mis à jour le ' . $fiche['date_maj_fiche'];
+      $date = 'Mis à jour le ' . strftime($dateFormat, strtotime($fiche['date_maj_fiche']));
     }
 
     $html = "<div class='actuEA'>\n
