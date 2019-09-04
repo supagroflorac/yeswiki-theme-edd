@@ -37,7 +37,7 @@ foreach($fiches as $fiche) {
       $button = "<span class='actuEAButton'>$file $link</span>\n";
     }
 
-    setlocale(LC_TIME, 'fr_FR');
+    setlocale(LC_TIME, 'fr_FR.UTF-8');
     $dateFormat = "%e %B %G";
     $date = 'Créé le ' . strftime($dateFormat, strtotime($fiche['date_creation_fiche']));
     if ($fiche['date_creation_fiche'] !== $fiche['date_maj_fiche']) {
