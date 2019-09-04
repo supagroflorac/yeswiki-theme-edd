@@ -44,8 +44,11 @@ foreach($record_array as $record) {
       $button = "<span class='eventEEDDButton'>$link</span>\n";
     }
 
-    $date = 'Du ' . $record['bf_date_debut_evenement']
-        .' au ' . $record['bf_date_fin_evenement'];
+    $dateFormat = "%e %B %G";
+    $startDate = strftime($dateFormat, strtotime($record['bf_date_debut_evenement']));
+    $endDate = strftime($dateFormat, strtotime($record['bf_date_fin_evenement']));
+
+    $date = "Du $startDate au $endDate.";
 
     $html = "<div class='eventEEDD'>\n
       <div class='imageEventEEDD'>$image</div>\n
