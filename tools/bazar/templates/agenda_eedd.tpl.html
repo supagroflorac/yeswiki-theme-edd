@@ -10,11 +10,11 @@ $record_array = array();
 foreach ($fiches as $fiche) {
 
     // Ne prend que les évènements dont la date de fin n'est pas encore passé.
-    if (strtotime($fiche['bf_date_debut_evenement']) > time()) {
-        $record_array[strtotime($fiche['bf_date_debut_evenement'])] = $fiche;
+    if (strtotime($fiche['bf_date_fin_evenement']) > time()) {
+        $record_array[strtotime($fiche['bf_date_fin_evenement'])] = $fiche;
     }
 }
-krsort($record_array, SORT_REGULAR);
+ksort($record_array, SORT_REGULAR);
 
 foreach($record_array as $record) {
     $image = "<img src='files/backgrounds/defautedd.jpg' />\n";
