@@ -47,10 +47,31 @@ div.ecoresponsables {
   text-align: left;
   a.ecoresponsable {
 
+    display: block;
+
     img {
       width: 2em;
       height: 2em;
+      background: #707070;
+      float: left;
+      margin-right: .5em;
+      border-radius: 50%;
+    }
+
+    p.ecoresponsable_name {
+      margin-bottom: 0;
+    }
+
+    .institution {
+      font-size: .5em;
+      color: #707070;
     } 
+  }
+
+  a.ecoresponsable:hover {
+    text-decoration: none;
+    //transform: scale(1.05);
+    color: #28C100;
   }
 }
 

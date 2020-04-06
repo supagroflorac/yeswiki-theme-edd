@@ -29,8 +29,25 @@ foreach ($fiches as $fiche) {
         );
     }
 
+    $institution_name = baz_valeurs_fiche($fiche['listefiche17'])['bf_titre'];
+
     $html = "<a class='ecoresponsable' href='$link'>
-      <p class='ecoresponsable_name'> <img src='$avatar' alt='avatar' /> $name</p>
+      <table>
+        <tr>
+          <td><img src='$avatar' alt='avatar' />
+          <td>
+            <p class='ecoresponsable_name'>$name</p>
+            <p class='institution'>$institution_name</p>
+      </p>
+      </table>
+
+
+
+      <!--<img src='$avatar' alt='avatar' /> 
+      <p class='ecoresponsable_name'> 
+        $name<br />
+        <span class='institution'>$institution_name</span>
+      </p>-->
     </a>";
 
     print($html);

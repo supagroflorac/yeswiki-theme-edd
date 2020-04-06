@@ -554,7 +554,11 @@ div.nouveau_ecoresponsables a.nouveau_ecoresponsable:hover img { border: 2px sol
 div.nouveau_ecoresponsables a.nouveau_ecoresponsable:hover p { color: #ff3da6; }
 
 div.ecoresponsables { columns: 4; text-align: left; }
-div.ecoresponsables a.ecoresponsable img { width: 2em; height: 2em; }
+div.ecoresponsables a.ecoresponsable { display: block; }
+div.ecoresponsables a.ecoresponsable img { width: 2em; height: 2em; background: #707070; float: left; margin-right: .5em; border-radius: 50%; }
+div.ecoresponsables a.ecoresponsable p.ecoresponsable_name { margin-bottom: 0; }
+div.ecoresponsables a.ecoresponsable .institution { font-size: .5em; color: #707070; }
+div.ecoresponsables a.ecoresponsable:hover { text-decoration: none; color: #28C100; }
 
 @media (max-width: 1024px) { div.ecoresponsables { columns: 3; } }
 @media (max-width: 700px) { div.ecoresponsables { columns: 2; } }
