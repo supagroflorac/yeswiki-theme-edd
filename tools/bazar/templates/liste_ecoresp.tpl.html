@@ -10,7 +10,7 @@ if (count($fiches) > 0) {
 foreach ($fiches as $fiche) {
     $link = "?" . $fiche['id_fiche'];
     $avatar = "themes/edd/images/default_avatar.svg";
-    $name = $fiche['bf_titre'];
+    $name = ucwords(strtolower($fiche['bf_titre']));
 
     if (isset($fiche['imagebf_image'])
         and $fiche['imagebf_image'] != ''
