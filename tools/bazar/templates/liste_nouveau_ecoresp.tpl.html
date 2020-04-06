@@ -1,10 +1,10 @@
 <?php
 
-$avatarWidth = 20;
-$avatarHeight = 20;
+$avatarWidth = 200;
+$avatarHeight = 200;
 
 if (count($fiches) > 0) {
-    print("<div class='ecoresponsables'>\n");
+    print("<div class='nouveau_ecoresponsables'>\n");
 }
 
 foreach ($fiches as $fiche) {
@@ -29,12 +29,13 @@ foreach ($fiches as $fiche) {
         );
     }
 
-    $html = "<a class='ecoresponsable' href='$link'>
-      <p class='ecoresponsable_name'> <img src='$avatar' alt='avatar' /> $name</p>
+    $html = "<a class='nouveau_ecoresponsable' href='$link'>
+      <img src='$avatar' alt='avatar' />
+      <p class='nouveau_ecoresponsable_name'>$name</p>
     </a>";
 
     print($html);
-}
+} 
 
 if (count($fiches) > 0) {
   print("</div>\n");

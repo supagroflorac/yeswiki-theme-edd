@@ -545,14 +545,19 @@ footer div.include a { text-decoration: underline; color: white; }
 footer div.include img { max-width: 14em; max-height: 8em; width: auto; height: auto; margin: 1em; }
 footer div.include .row { display: flex; flex-flow: row wrap; align-items: center; justify-content: center; }
 
-div.ecoresponsables { display: flex; flex-flow: row wrap; justify-content: space-between; }
-div.ecoresponsables a.ecoresponsable { text-decoration: none; margin: 1em; flex-grow: 1; flex: 1 1 content; text-align: center; color: #297fff; }
-div.ecoresponsables a.ecoresponsable img { width: 150px; height: 150px; border-radius: 50%; border: 1px solid #297fff; background: white; }
-div.ecoresponsables a.ecoresponsable p { font-weight: bold; font-size: 0.8em; margin-top: 0.5em; max-width: 150px; margin: 0.5em auto; }
-div.ecoresponsables a.ecoresponsable:hover { transform: scale(1.05); color: #ff3da6; }
-div.ecoresponsables a.ecoresponsable:hover img { border: 2px solid #ff3da6; }
-div.ecoresponsables a.ecoresponsable:hover p { color: #ff3da6; }
+div.nouveau_ecoresponsables { display: flex; flex-flow: row wrap; justify-content: space-between; }
+div.nouveau_ecoresponsables a.nouveau_ecoresponsable { text-decoration: none; margin: 1em; flex-grow: 1; flex: 1 1 content; text-align: center; color: #297fff; }
+div.nouveau_ecoresponsables a.nouveau_ecoresponsable img { width: 150px; height: 150px; border-radius: 50%; border: 1px solid #297fff; background: white; }
+div.nouveau_ecoresponsables a.nouveau_ecoresponsable p { font-weight: bold; font-size: 0.8em; margin-top: 0.5em; max-width: 150px; margin: 0.5em auto; }
+div.nouveau_ecoresponsables a.nouveau_ecoresponsable:hover { transform: scale(1.05); color: #ff3da6; }
+div.nouveau_ecoresponsables a.nouveau_ecoresponsable:hover img { border: 2px solid #ff3da6; }
+div.nouveau_ecoresponsables a.nouveau_ecoresponsable:hover p { color: #ff3da6; }
 
+div.ecoresponsables { columns: 4; text-align: left; }
+div.ecoresponsables a.ecoresponsable img { width: 2em; height: 2em; }
+
+@media (max-width: 1024px) { div.ecoresponsables { columns: 3; } }
+@media (max-width: 700px) { div.ecoresponsables { columns: 2; } }
 #main { max-width: 65em; }
 
 /*# sourceMappingURL=default.css.map */

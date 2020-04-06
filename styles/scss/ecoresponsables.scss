@@ -1,9 +1,9 @@
-div.ecoresponsables {
+div.nouveau_ecoresponsables {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
 
-  a.ecoresponsable {
+  a.nouveau_ecoresponsable {
     text-decoration: none;
     margin: 1em;
     flex-grow: 1;
@@ -28,7 +28,7 @@ div.ecoresponsables {
     }
   }
 
-  a.ecoresponsable:hover {
+  a.nouveau_ecoresponsable:hover {
     transform: scale(1.05);
     color: #ff3da6;
 
@@ -40,6 +40,28 @@ div.ecoresponsables {
       color: #ff3da6;
     }
   }
+}
 
+div.ecoresponsables {
+  columns: 4;
+  text-align: left;
+  a.ecoresponsable {
 
+    img {
+      width: 2em;
+      height: 2em;
+    } 
+  }
+}
+
+@media (max-width: 1024px) {
+  div.ecoresponsables {
+    columns: 3;
+  }
+}
+
+@media (max-width: 700px) {
+  div.ecoresponsables {
+    columns: 2;
+  }
 }
