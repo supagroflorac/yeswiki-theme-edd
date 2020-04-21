@@ -5,21 +5,26 @@ if (count($fiches) > 0) {
 }
 
 foreach($fiches as $fiche) {
-    $pageLink = '?' . $fiche['id_fiche'];
+    $page = '?' . $fiche['id_fiche'];
+    $title = ucfirst($fiche['bf_titre']);
 
-    $title = $fiche['bf_titre'];
-
-    $content = substr($fiche['bf_presentation'], 0, 200);
-    if (strlen(utf8_decode($fiche['bf_presentation'])) > 200) {
-      $content .= "[…]";
+    $content = substr($fiche['bf_presentation'], 0, 300);
+    if (strlen(utf8_decode($fiche['bf_presentation'])) > 300) {
+      $content .= "… <a href='$page'>lire la suite</a>";
     }
 
+    setlocale(LC_TIME, 'fr_FR.UTF-8');
+    $dateFormat = "%e %B %G";
+    $date = 'Ajouté le ' . strftime($dateFormat, strtotime($fiche['date_creation_fiche']));
+    if ($fiche['date_creation_fiche'] !== $fiche['date_maj_fiche']) {
+      $date = 'Mis à jour le ' . strftime($dateFormat, strtotime($fiche['date_maj_fiche']));
+    }
 
-    $html = "<a href='$pageLink' class='initiative'>\n
+    $html = "<div class='initiative'>\n
       <h1>$title</h1>\n
+      <p class='dateActuEA'>$date</p>\n
       <p>$content</p>\n
-    </a>\n
-    ";
+    </div>\n";
 
     print($html);
 }

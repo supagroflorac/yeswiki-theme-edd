@@ -10,38 +10,37 @@ div.initiativesEA {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: stretch;
+    align-items: flex-start;
 
     border: 1em white solid;
     overflow: hidden;
     transition: transform 0.5s ease;
-    padding: 1em;
+    padding: .5em;
+    margin: .5em;
     text-align: left;
-    width: 25%;
+    width: 100%;
 
     h1 {
-      color: #28C100;
-      font-size: 1.5em;
-      text-transform: capitalize;
+      color: #1559b5;
+      font-size: 1.8em;
+      font-weight: bold;
       margin-top: 0;
-      min-height: 3em;
     }
 
-    h2 {
-      margin-top: 0;
-      font-size: 1.2em;
-      flex-grow: 0;
+    p.dateActuEA {
+      font-size: 0.6em;
+      align-self: flex-start;
     }
 
     p {
       color: #333;
       overflow: hidden;
       text-overflow: ellipsis;
-      flex-grow:2;
+      flex-grow: 2;
     }
   }
 
-  .initiative:hover {
+  /*.initiative:hover {
     text-decoration: none;
     transform: scale(1.05);
   }
@@ -55,14 +54,14 @@ div.initiativesEA {
     right: 3px;
     bottom: 3px;
     border: 3px solid #ff3da6;
-  }
+  }*/
 }
 
-@media (max-width: 1100px) {
+/*@media (max-width: 1100px) {
   div.initiativesEA .initiative {
     width: 33%;
   }
-}
+}*/
 
 @media (max-width: 860px) {
   div.initiativesEA .initiative {
