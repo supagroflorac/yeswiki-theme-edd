@@ -546,6 +546,7 @@ footer div.include img { max-width: 14em; max-height: 8em; width: auto; height: 
 footer div.include .row { display: flex; flex-flow: row wrap; align-items: center; justify-content: center; }
 
 div.ecoresponsables { columns: 4; text-align: left; }
+div.ecoresponsables h3.ecoresponsable { margin-top: 0; }
 div.ecoresponsables a.ecoresponsable { display: block; }
 div.ecoresponsables a.ecoresponsable img { width: 2em; height: 2em; background: #707070; float: left; margin-right: .5em; border-radius: 50%; }
 div.ecoresponsables a.ecoresponsable p.ecoresponsable_name { margin-bottom: 0; }

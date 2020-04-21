@@ -1,6 +1,11 @@
 div.ecoresponsables {
   columns: 4;
   text-align: left;
+
+  h3.ecoresponsable {
+    margin-top: 0;
+  }
+
   a.ecoresponsable {
 
     display: block;

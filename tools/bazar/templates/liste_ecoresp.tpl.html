@@ -7,11 +7,17 @@ if (count($fiches) > 0) {
     print("<div class='ecoresponsables'>\n");
 }
 
-foreach ($fiches as $fiche) {
-    $link = "?" . $fiche['id_fiche'];
-    $avatar = "themes/edd/images/default_avatar.svg";
-    $name = ucwords(strtolower($fiche['bf_titre']));
+$ecorespsByYear = array();
 
+foreach ($fiches as $fiche) {
+
+    $year = strftime("%Y", strtotime($fiche['date_creation_fiche']));
+
+    if ( !array_key_exists($year, $ecorespsByYear)) {
+      $ecorespsByYear[$year] = array();
+    }
+
+    $avatar = "themes/edd/images/default_avatar.svg";
     if (isset($fiche['imagebf_image'])
         and $fiche['imagebf_image'] != ''
     ){
@@ -29,28 +35,36 @@ foreach ($fiches as $fiche) {
         );
     }
 
-    $institution_name = baz_valeurs_fiche($fiche['listefiche17'])['bf_titre'];
+    $ecorespsByYear[$year][] = array(
+      'link'        => "?" . $fiche['id_fiche'],
+      'avatar'      => $avatar,
+      'name'        => ucwords(strtolower($fiche['bf_titre'])),
+      'institution' => baz_valeurs_fiche($fiche['listefiche17'])['bf_titre'],
+    );
+}
 
-    $html = "<a class='ecoresponsable' href='$link'>
+krsort($ecorespsByYear);
+
+foreach ($ecorespsByYear as $year => $ecoresps ) {
+  
+  print("<h3 class='ecoresponsable'>$year</h3>");
+
+  foreach ($ecoresps as $ecoresp) {
+
+    $html = "<a class='ecoresponsable' href='${ecoresp['link']}'>
       <table>
         <tr>
-          <td><img src='$avatar' alt='avatar' />
+          <td><img src='${ecoresp['avatar']}' alt='avatar' />
           <td>
-            <p class='ecoresponsable_name'>$name</p>
-            <p class='institution'>$institution_name</p>
+            <p class='ecoresponsable_name'>${ecoresp['name']}</p>
+            <p class='institution'>${ecoresp['institution']}</p>
       </p>
       </table>
-
-
-
-      <!--<img src='$avatar' alt='avatar' /> 
-      <p class='ecoresponsable_name'> 
-        $name<br />
-        <span class='institution'>$institution_name</span>
-      </p>-->
     </a>";
 
     print($html);
+
+  }
 }
 
 if (count($fiches) > 0) {
