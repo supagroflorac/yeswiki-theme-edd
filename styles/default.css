@@ -537,9 +537,9 @@ div.ecoresponsables a.ecoresponsable:hover { text-decoration: none; color: #28C1
 
 @media (max-width: 1024px) { div.ecoresponsables { columns: 3; } }
 @media (max-width: 700px) { div.ecoresponsables { columns: 2; } }
-.bandeau_interne { display: inherit; margin: 0 1em; padding: 0; height: 100%; }
-.bandeau_interne a { display: flex; flex-flow: row nowrap; align-items: flex-end; justify-content: flex-start; }
-.bandeau_interne a:hover { text-decoration: none; }
+.bandeau_interne:hover { text-decoration: none; }
+
+.bandeau_interne { display: inherit; margin: 0 1em; padding: 0; height: 100%; display: flex; flex-flow: row nowrap; align-items: flex-end; justify-content: flex-start; }
 .bandeau_interne #mainTitle { margin: 0; white-space: nowrap; font-size: 3em; line-height: normal; }
 .bandeau_interne #mainTitle span:nth-child(1) { color: #28C100; }
 .bandeau_interne #mainTitle span:nth-child(2) { color: #297fff; }
