@@ -551,6 +551,6 @@ div.ecoresponsables a.ecoresponsable:hover { text-decoration: none; color: #28C1
 .bandeau_interne #mainTitle span:nth-child(7) { color: #e9ff33; }
 .bandeau_interne img { height: 105px; vertical-align: bottom; }
 
-#main { max-width: 65em; }
+#main { max-width: 50em; }
 
 /*# sourceMappingURL=default.css.map */
