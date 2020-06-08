@@ -192,7 +192,7 @@ section { display: flex; align-items: flex-start; flex-direction: row; }
 
 article { flex: 0 1 100%; order: 1; }
 
-aside { flex: 0 0 250px; order: 2; border: 4px solid #fc8525; }
+aside { flex: 0 0 250px; order: 2; }
 
 @media screen and (max-width: 767px) { section { flex-direction: column; align-items: stretch; }
   aside { flex: 0 0 auto; align-self: stretch; order: 2; padding: 20px; margin: 10px auto 0; width: 100%; } }
@@ -313,7 +313,7 @@ section { background: #92C362; box-sizing: border-box; margin: 500px auto 0; wid
 @media screen and (min-width: 1400px) and (max-width: 1649px) { section { padding-left: 8%; padding-right: 8%; } }
 @media screen and (min-width: 1650px) and (max-width: 1919px) { section { padding-left: 10%; padding-right: 10%; } }
 @media screen and (min-width: 1919px) { section { padding-left: 15%; padding-right: 15%; } }
-article { background: white; padding: 20px; margin: -100px auto auto; text-align: justify; min-height: 780px; border: 3px solid #ff3da6; }
+article { background: white; padding: 20px; margin: -100px auto auto; text-align: justify; min-height: 780px; }
 
 .pageprincipale article { max-width: 1000px; }
 
