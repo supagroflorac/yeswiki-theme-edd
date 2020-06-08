@@ -1,0 +1,51 @@
+.bandeau_interne {
+    display: inherit;
+    margin: 0 1em;
+    padding: 0;
+    height: 100%;
+
+    a {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    #mainTitle {
+        margin: 0;
+        white-space: nowrap;
+        font-size: 3em;
+        line-height: normal;
+
+        span:nth-child(1) {
+            color: #28C100;
+        }
+        span:nth-child(2) {
+            color: #297fff;
+        }
+        span:nth-child(3) {
+            color: #00DCA6;
+        }
+        span:nth-child(4) {
+            color: #ff36bf;
+        }
+        span:nth-child(5) {
+            color: #ff740e;
+        }
+        span:nth-child(6) {
+            color: #C8000E;
+        }
+        span:nth-child(7) {
+            color:#e9ff33;
+        }
+    }
+
+    img {
+        height: 105px;
+        vertical-align: bottom;
+    }
+}

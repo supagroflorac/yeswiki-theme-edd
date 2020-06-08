@@ -147,9 +147,6 @@ footer a:hover { color: #81B038; }
   .navig .menu_haut .include { width: auto; } }
 @media screen and (max-width: 767px) { .navig .menu_haut > div { position: unset; }
   .menunav { position: unset; } }
-/******* Flex 1A : orga logo et titre site  *******/
-.bandeau_interne { display: flex; flex-direction: row; justify-content: center; align-items: flex-end; }
-
 .logo { flex: 0 0 auto; align-self: center; }
 
 .nom_site { flex: 1 1 initial; }
@@ -241,22 +238,7 @@ nav, footer { margin: 0; padding: 10px; }
 
 .nav-is-stuck #header .bandeau { display: none; }
 
-.bandeau_interne { padding: 15px; overflow: hidden; width: 100%; height: 110px; transition: height 200ms linear; }
-
-@media screen and (min-width: 1600px) { .bandeau_interne { padding: 25px 0 5px; } }
-@media screen and (max-width: 767px) { .bandeau_interne { padding: 5px 0 5px; height: 80px; } }
-.nav-is-stuck #header .bandeau_interne { height: 0; padding: 0; }
-
-.bandeau_interne .logo { width: auto; }
-
-.bandeau_interne .logo img { margin: 5px; max-width: 100%; height: 80px; overflow: hidden; transition: height 200ms linear; }
-
-.nav-is-stuck .bandeau_interne .logo img { height: 0; }
-
-@media screen and (max-width: 767px) { .bandeau_interne .logo img { height: 60px; } }
-.bandeau_interne .nom_site { transition: width 0.7s ease-out; }
-
-.bandeau_interne .nom_site h1 { padding: 0 10px; margin: 8px auto 0; }
+.nav-is-stuck .logo img { height: 0; }
 
 /*************************************************************************/
 /**************************** Menus   ************************************/
@@ -555,6 +537,19 @@ div.ecoresponsables a.ecoresponsable:hover { text-decoration: none; color: #28C1
 
 @media (max-width: 1024px) { div.ecoresponsables { columns: 3; } }
 @media (max-width: 700px) { div.ecoresponsables { columns: 2; } }
+.bandeau_interne { display: inherit; margin: 0 1em; padding: 0; height: 100%; }
+.bandeau_interne a { display: flex; flex-flow: row nowrap; align-items: flex-end; justify-content: flex-start; }
+.bandeau_interne a:hover { text-decoration: none; }
+.bandeau_interne #mainTitle { margin: 0; white-space: nowrap; font-size: 3em; line-height: normal; }
+.bandeau_interne #mainTitle span:nth-child(1) { color: #28C100; }
+.bandeau_interne #mainTitle span:nth-child(2) { color: #297fff; }
+.bandeau_interne #mainTitle span:nth-child(3) { color: #00DCA6; }
+.bandeau_interne #mainTitle span:nth-child(4) { color: #ff36bf; }
+.bandeau_interne #mainTitle span:nth-child(5) { color: #ff740e; }
+.bandeau_interne #mainTitle span:nth-child(6) { color: #C8000E; }
+.bandeau_interne #mainTitle span:nth-child(7) { color: #e9ff33; }
+.bandeau_interne img { height: 105px; vertical-align: bottom; }
+
 #main { max-width: 65em; }
 
 /*# sourceMappingURL=default.css.map */

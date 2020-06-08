@@ -433,14 +433,6 @@ footer a:hover {
   }
 }
 
-/******* Flex 1A : orga logo et titre site  *******/
-.bandeau_interne {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-end;
-}
-
 .logo {
   flex: 0 0 auto;
   align-self: center;
@@ -653,8 +645,6 @@ article.double {
 /******* Flex smartphone portrait  *******/
 
 @media screen and (orientation:portrait) {
-  .bandeau_interne {
-  }
 
   .logo {
     flex: 0 0 auto;
@@ -742,63 +732,9 @@ nav, footer {
   display: none;
 }
 
-.bandeau_interne {
-  padding: 15px;
-  overflow: hidden;
-  width: 100%;
-  height: 110px;
-  transition: height 200ms linear;
-}
-
-@media screen and (min-width:1600px) {
-  .bandeau_interne {
-    padding: 25px 0 5px;
-  }
-}
-
-@media screen and (max-width:767px) {
-  .bandeau_interne {
-    padding: 5px 0 5px;
-    height: 80px;
-  }
-}
-
-.nav-is-stuck #header .bandeau_interne {
-  height: 0;
-  padding: 0;
-}
-
-.bandeau_interne .logo {
-  width: auto;
-}
-
-.bandeau_interne .logo img {
-  margin: 5px;
-  max-width: 100%;
-  height: 80px;
-  overflow: hidden;
-  transition: height 200ms linear;
-}
-
-.nav-is-stuck .bandeau_interne .logo img {
+.nav-is-stuck .logo img {
   height: 0;
 }
-
-@media screen and (max-width:767px) {
-  .bandeau_interne .logo img {
-    height: 60px;
-  }
-}
-
-.bandeau_interne .nom_site {
-  transition: width 0.7s ease-out;
-}
-
-.bandeau_interne .nom_site h1 {
-  padding: 0 10px;
-  margin: 8px auto 0;
-}
-
 
 /*************************************************************************/
 /**************************** Menus   ************************************/
