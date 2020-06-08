@@ -8,10 +8,8 @@ foreach($fiches as $fiche) {
     $page = '?' . $fiche['id_fiche'];
     $title = ucfirst($fiche['bf_titre']);
 
-    $content = substr($fiche['bf_presentation'], 0, 300);
-    if (strlen(utf8_decode($fiche['bf_presentation'])) > 300) {
-      $content .= "… <a href='$page'>lire la suite</a>";
-    }
+    $content = substr($fiche['bf_presentation'], 0, 300)
+             . "… <a href='$page'>lire la suite</a>";
 
     setlocale(LC_TIME, 'fr_FR.UTF-8');
     $dateFormat = "%e %B %G";
@@ -21,7 +19,7 @@ foreach($fiches as $fiche) {
     }
 
     $html = "<div class='initiative'>\n
-      <h1>$title</h1>\n
+      <h1><a href='$page'>$title</a></h1>\n
       <p class='dateActuEA'>$date</p>\n
       <p>$content</p>\n
     </div>\n";
