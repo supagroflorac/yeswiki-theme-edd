@@ -1,49 +1,111 @@
+.bandeau {
+  background-color: white;
+}
+
+@media screen and (max-width:768px) {
+  #header h1 {
+    line-height: 38px;
+    font-size: 36px;
+  }
+
+  .bandeau .logo {
+    height: 60px;
+  }
+}
+
+@media screen and (min-width:1600px) {
+  #header {
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+  }
+
+  .bandeau {
+    flex: 0 0 50%;
+    display: inline-block;
+  }
+}
+
+/******* Flex 1 : organisation des blocs bandeau (1A) et menu (1B)   *******/
+#header {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.bandeau {
+  flex: 0 0 auto;
+  display: block;
+}
+
+#header {
+  background-color: rgba(255, 255, 255, 1);
+  color: #555;
+  text-align: left;
+}
+
+#header h1 {
+  line-height: 50px;
+  font-size: 48px;
+}
+
+#header ul,
+#header ol {
+  list-style: outside none none;
+}
+
+
 .bandeau_interne:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .bandeau_interne {
-    display: inherit;
-    margin: 0 1em;
-    padding: 0;
-    height: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-end;
-    justify-content: flex-start;
+  display: inherit;
+  margin: 0 1em;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+  justify-content: flex-start;
 
-    #mainTitle {
-        margin: 0;
-        white-space: nowrap;
-        font-size: 3em;
-        line-height: normal;
+  #mainTitle {
+    margin: 0;
+    white-space: nowrap;
+    font-size: 3em;
+    line-height: normal;
 
-        span:nth-child(1) {
-            color: #28C100;
-        }
-        span:nth-child(2) {
-            color: #297fff;
-        }
-        span:nth-child(3) {
-            color: #00DCA6;
-        }
-        span:nth-child(4) {
-            color: #ff36bf;
-        }
-        span:nth-child(5) {
-            color: #ff740e;
-        }
-        span:nth-child(6) {
-            color: #C8000E;
-        }
-        span:nth-child(7) {
-            color:#e9ff33;
-        }
+    span:nth-child(1) {
+      color: #28C100;
     }
 
-    img {
-        height: 105px;
-        vertical-align: bottom;
+    span:nth-child(2) {
+      color: #297fff;
     }
+
+    span:nth-child(3) {
+      color: #00DCA6;
+    }
+
+    span:nth-child(4) {
+      color: #ff36bf;
+    }
+
+    span:nth-child(5) {
+      color: #ff740e;
+    }
+
+    span:nth-child(6) {
+      color: #C8000E;
+    }
+
+    span:nth-child(7) {
+      color: #e9ff33;
+    }
+  }
+
+  img {
+    height: 105px;
+    vertical-align: bottom;
+  }
 }
-

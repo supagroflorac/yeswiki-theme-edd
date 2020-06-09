@@ -1,0 +1,90 @@
+.boite_nuage {
+  border: 1px solid #999;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: grey;
+}
+
+.nuage {
+  display: flex !important;
+  max-width: 100% !important;
+  flex-wrap: wrap !important;
+}
+
+.tag-list {
+  display: inline-block !important;
+  float: none !important;
+  transform: rotate(-2deg);
+  flex: 1 1 33.333%;
+  box-sizing: border-box;
+  margin-top: 10px !important;
+}
+
+a.size6 {
+  font-size: 32px !important;
+  font-weight: bold;
+  color: #000 !important;
+  padding: 2px 5px !important;
+}
+
+a.size5 {
+  font-size: 28px !important;
+  font-weight: bold;
+  color: #000 !important;
+  padding: 2px 5px !important;
+}
+
+a.size4 {
+  font-size: 24px !important;
+  font-weight: bold;
+  color: #444 !important;
+  padding: 2px 5px !important;
+}
+
+a.size3 {
+  font-size: 24px !important;
+  color: #444 !important;
+  padding: 2px 5px !important;
+}
+
+a.size2 {
+  font-size: 18px !important;
+  color: #fff !important;
+  padding: 2px 5px !important;
+}
+
+a.size1 {
+  font-size: 15px !important;
+  color: #fff !important;
+  padding: 2px 5px !important;
+}
+
+a.size5:hover,
+a.size6:hover {
+  color: #1559b5 !important;
+}
+
+a.size1:hover,
+a.size2:hover,
+a.size3:hover,
+a.size4:hover {
+  color: #1559b5;
+}
+
+@media screen and (max-width:767px) {
+  .tag-list {
+    flex: 1 1 100%;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1280px) {
+  .tag-list {
+    flex: 1 1 50%;
+  }
+}
+
+@media screen and (min-width:1921px) {
+  .tag-list {
+    flex: 1 1 25%;
+  }
+}

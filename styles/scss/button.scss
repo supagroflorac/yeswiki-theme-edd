@@ -1,0 +1,52 @@
+a.btn-large.btn-block {
+  font-size: 21px;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+a.btn-xl {
+  padding: 2px 12px;
+  font-size: 24px;
+}
+
+a.btn {
+  color: #333;
+}
+
+a.btn:hover {
+  text-decoration: none;
+}
+
+a.btn-primary {
+  background-color: #297fff;
+  color: #fff;
+}
+
+a.btn-danger {
+  background-color: #ff36bf;
+  color: #fff;
+}
+
+a.btn-success {
+  background-color: #00DCA6;
+  color: #fff;
+}
+
+a.btn-info {
+  color: #fff;
+}
+
+@media screen and (max-width:767px) {
+  .btn-large.btn-block {
+    font-size: 16px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1280px) {
+  a.btn-large.btn-block {
+    font-size: 18px;
+  } 
+}

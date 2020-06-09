@@ -1,11 +1,90 @@
-@import 'old';
+@import 'vars';
+
+html {
+  font-size: 16px;
+  line-height: 135%;
+}
+
+body {
+  //font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans",
+  //  "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: #92C362;
+  background-position: center 0 !important;
+  background-size: 100% auto !important;
+  font-size: 100%;
+}
+
+@media screen and (min-resolution: 250dpi) {
+  body {
+    font-size: 120%;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/******* Flex 2 : orga du contenu de la page  *******/
+section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  background: #92C362;
+  box-sizing: border-box;
+  margin: 500px auto 0;
+  width: 100%;
+}
+
+article {
+  flex: 0 1 100%;
+  order: 1;
+  background: white;
+  padding: 2em;
+  margin-top: -100px;
+  min-height: 780px;
+
+  max-width: 52em;
+  color: $edd_color_text;
+  margin-bottom: 2em;
+}
+
+aside {
+  flex: 0 0 250px;
+  order: 2;
+  background: white;
+  padding: 1em;
+  margin: -1em 0 auto 4em;
+  text-align: left;
+}
+
+@media screen and (max-width:1024px) {
+  section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  article {
+    flex: 0 0 auto;
+    margin: -100px auto 0;
+  }
+
+  aside {
+    flex: 0 0 auto;
+    order: 2;
+    padding: 1em;
+    margin: .5em auto 0;
+    width: 100%;
+  }
+}
+
+@import 'menu';
+@import 'text';
+@import 'button';
 @import 'actusEA';
 @import 'agendaEEDD';
 @import 'initiatives';
 @import 'footer';
 @import 'ecoresponsables';
 @import 'header';
-
-#main {
-  max-width: 50em;
-}

@@ -1,0 +1,49 @@
+@font-face {
+  font-family: AlegreyaSC;
+  src: url('Alegreya/AlegreyaSansSC-Regular.ttf');
+}
+
+@font-face {
+  font-family: AlegreyaSC;
+  font-weight: bold;
+  src: url('Alegreya/Alegreya-Bold.ttf');
+}
+
+.page {
+  h1 {
+    color: $edd_color_main;
+    font-size: 2em;
+    font-weight: bolder;
+  }
+
+  h2 {
+    color: $edd_color_second;
+    font-size: 1.8em;
+    font-weight: bold;
+  }
+
+  h3 {
+    color: $edd_color_link;
+    font-size: 1.8em;
+    font-weight: bold;
+  }
+
+  h4 {
+    color: $edd_color_text;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  a {
+    color: #1559b5;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .well {
+    font-size: 1.1em;
+  }
+}
